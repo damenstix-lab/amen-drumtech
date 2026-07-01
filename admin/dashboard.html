@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Amen Drumtech</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <header class="header admin-header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1 class="logo"><a href="../index.html">AMEN<span>DRUMTECH</span></a></h1>
+                <span class="admin-badge">Admin</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="payouts.html">Payouts</a></li>
+                <li><a href="../index.html">View Store</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="admin-content">
+        <div class="container">
+            <h2 class="admin-title">Dashboard Overview</h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon revenue">&#8358;</div>
+                    <div class="stat-info">
+                        <h3 id="total-revenue">&#8358;2,450,000</h3>
+                        <p>Total Revenue</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orders">&#128230;</div>
+                    <div class="stat-info">
+                        <h3 id="total-orders">156</h3>
+                        <p>Total Orders</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon payouts">&#128176;</div>
+                    <div class="stat-info">
+                        <h3 id="total-payouts">&#8358;980,000</h3>
+                        <p>Vendor Payouts</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon pending">&#9203;</div>
+                    <div class="stat-info">
+                        <h3 id="pending-payouts">&#8358;320,000</h3>
+                        <p>Pending Payouts</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-grid">
+                <div class="admin-card">
+                    <h3>Recent Orders</h3>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recent-orders">
+                            <tr>
+                                <td>#ADT-001</td>
+                                <td>Chinedu Okafor</td>
+                                <td>&#8358;85,000</td>
+                                <td><span class="status paid">Paid</span></td>
+                            </tr>
+                            <tr>
+                                <td>#ADT-002</td>
+                                <td>Amaka Johnson</td>
+                                <td>&#8358;42,500</td>
+                                <td><span class="status paid">Paid</span></td>
+                            </tr>
+                            <tr>
+                                <td>#ADT-003</td>
+                                <td>Tunde Bello</td>
+                                <td>&#8358;156,000</td>
+                                <td><span class="status processing">Processing</span></td>
+                            </tr>
+                            <tr>
+                                <td>#ADT-004</td>
+                                <td>Grace Eze</td>
+                                <td>&#8358;28,000</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="orders.html" class="btn btn-outline btn-sm">View All Orders</a>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Quick Payout</h3>
+                    <p class="card-desc">Send money to vendors via OPay</p>
+                    <div class="quick-payout-form">
+                        <div class="form-group">
+                            <label>Vendor</label>
+                            <select id="quick-vendor">
+                                <option value="">Select vendor...</option>
+                                <option value="v1">DrumWorks Nigeria - 8012345678</option>
+                                <option value="v2">BeatMaker Supplies - 9023456789</option>
+                                <option value="v3">Stick & Stone Ltd - 7034567890</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Amount (&#8358;)</label>
+                            <input type="number" id="quick-amount" placeholder="Enter amount">
+                        </div>
+                        <div class="form-group">
+                            <label>Note</label>
+                            <input type="text" id="quick-note" placeholder="Payment description">
+                        </div>
+                        <button class="btn btn-primary btn-full" id="quick-payout-btn">
+                            Send via OPay
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
