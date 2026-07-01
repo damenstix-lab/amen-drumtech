@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Amen Drumtech Admin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <header class="header admin-header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1 class="logo"><a href="../index.html">AMEN<span>DRUMTECH</span></a></h1>
+                <span class="admin-badge">Admin</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="orders.html" class="active">Orders</a></li>
+                <li><a href="payouts.html">Payouts</a></li>
+                <li><a href="../index.html">View Store</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="admin-content">
+        <div class="container">
+            <h2 class="admin-title">All Orders</h2>
+
+            <div class="admin-card">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Customer</th>
+                            <th>Items</th>
+                            <th>Amount</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="all-orders">
+                        <tr>
+                            <td>#ADT-001</td>
+                            <td>2026-06-30</td>
+                            <td>Chinedu Okafor</td>
+                            <td>Pro Snare Drum x1</td>
+                            <td>&#8358;85,000</td>
+                            <td><span class="badge-opay">OPay</span></td>
+                            <td><span class="status paid">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ADT-002</td>
+                            <td>2026-06-29</td>
+                            <td>Amaka Johnson</td>
+                            <td>Drumsticks Pro x2, Hi-Hat Stand x1</td>
+                            <td>&#8358;42,500</td>
+                            <td><span class="badge-opay">OPay</span></td>
+                            <td><span class="status paid">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ADT-003</td>
+                            <td>2026-06-28</td>
+                            <td>Tunde Bello</td>
+                            <td>Electronic Drum Kit V2 x1</td>
+                            <td>&#8358;156,000</td>
+                            <td><span class="badge-opay">OPay</span></td>
+                            <td><span class="status processing">Shipped</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ADT-004</td>
+                            <td>2026-06-28</td>
+                            <td>Grace Eze</td>
+                            <td>Practice Pad x1, Brushes x1</td>
+                            <td>&#8358;28,000</td>
+                            <td><span class="badge-opay">OPay</span></td>
+                            <td><span class="status pending">Processing</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ADT-005</td>
+                            <td>2026-06-27</td>
+                            <td>Emeka Nwosu</td>
+                            <td>5-Piece Acoustic Kit x1</td>
+                            <td>&#8358;320,000</td>
+                            <td><span class="badge-opay">OPay</span></td>
+                            <td><span class="status paid">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ADT-006</td>
+                            <td>2026-06-26</td>
+                            <td>Funke Adeyemi</td>
+                            <td>Drum Throne x1, Cymbal Pack x1</td>
+                            <td>&#8358;95,000</td>
+                            <td><span class="badge-opay">OPay</span></td>
+                            <td><span class="status paid">Delivered</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
