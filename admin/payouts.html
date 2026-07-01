@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payouts - Amen Drumtech Admin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <header class="header admin-header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1 class="logo"><a href="../index.html">AMEN<span>DRUMTECH</span></a></h1>
+                <span class="admin-badge">Admin</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="payouts.html" class="active">Payouts</a></li>
+                <li><a href="../index.html">View Store</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="admin-content">
+        <div class="container">
+            <div class="page-title-row">
+                <h2 class="admin-title">Vendor Payouts</h2>
+                <button class="btn btn-primary" id="new-payout-btn">+ New Payout</button>
+            </div>
+
+            <div class="payout-stats">
+                <div class="pstat">
+                    <span class="pstat-label">Total Disbursed</span>
+                    <span class="pstat-value">&#8358;980,000</span>
+                </div>
+                <div class="pstat">
+                    <span class="pstat-label">Pending</span>
+                    <span class="pstat-value warning">&#8358;320,000</span>
+                </div>
+                <div class="pstat">
+                    <span class="pstat-label">This Month</span>
+                    <span class="pstat-value">&#8358;245,000</span>
+                </div>
+                <div class="pstat">
+                    <span class="pstat-label">Vendors</span>
+                    <span class="pstat-value">8</span>
+                </div>
+            </div>
+
+            <!-- Vendors List -->
+            <div class="admin-card">
+                <h3>Registered Vendors</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Vendor Name</th>
+                            <th>OPay Account</th>
+                            <th>Total Paid</th>
+                            <th>Pending</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vendors-list">
+                        <tr>
+                            <td>DrumWorks Nigeria</td>
+                            <td>8012345678</td>
+                            <td>&#8358;450,000</td>
+                            <td>&#8358;120,000</td>
+                            <td><button class="btn btn-sm btn-primary payout-vendor" data-vendor="v1">Pay Now</button></td>
+                        </tr>
+                        <tr>
+                            <td>BeatMaker Supplies</td>
+                            <td>9023456789</td>
+                            <td>&#8358;280,000</td>
+                            <td>&#8358;85,000</td>
+                            <td><button class="btn btn-sm btn-primary payout-vendor" data-vendor="v2">Pay Now</button></td>
+                        </tr>
+                        <tr>
+                            <td>Stick & Stone Ltd</td>
+                            <td>7034567890</td>
+                            <td>&#8358;150,000</td>
+                            <td>&#8358;65,000</td>
+                            <td><button class="btn btn-sm btn-primary payout-vendor" data-vendor="v3">Pay Now</button></td>
+                        </tr>
+                        <tr>
+                            <td>Lagos Percussion Co</td>
+                            <td>8145678901</td>
+                            <td>&#8358;100,000</td>
+                            <td>&#8358;50,000</td>
+                            <td><button class="btn btn-sm btn-primary payout-vendor" data-vendor="v4">Pay Now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Payout History -->
+            <div class="admin-card">
+                <h3>Payout History</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Vendor</th>
+                            <th>Amount</th>
+                            <th>OPay Ref</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="payout-history">
+                        <tr>
+                            <td>2026-06-30</td>
+                            <td>DrumWorks Nigeria</td>
+                            <td>&#8358;85,000</td>
+                            <td>OPY-TXN-78291</td>
+                            <td><span class="status paid">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>2026-06-28</td>
+                            <td>BeatMaker Supplies</td>
+                            <td>&#8358;62,000</td>
+                            <td>OPY-TXN-78185</td>
+                            <td><span class="status paid">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>2026-06-27</td>
+                            <td>Stick & Stone Ltd</td>
+                            <td>&#8358;45,000</td>
+                            <td>OPY-TXN-78102</td>
+                            <td><span class="status paid">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>2026-06-25</td>
+                            <td>Lagos Percussion Co</td>
+                            <td>&#8358;38,000</td>
+                            <td>OPY-TXN-77998</td>
+                            <td><span class="status paid">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>2026-06-24</td>
+                            <td>DrumWorks Nigeria</td>
+                            <td>&#8358;120,000</td>
+                            <td>OPY-TXN-77856</td>
+                            <td><span class="status paid">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payout Modal -->
+    <div class="modal-overlay" id="payout-modal" style="display:none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Send Payout via OPay</h3>
+                <button class="modal-close" id="close-payout-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="payout-form" id="payout-form">
+                    <div class="form-group">
+                        <label>Vendor Name</label>
+                        <select id="payout-vendor">
+                            <option value="">Select vendor...</option>
+                            <option value="v1">DrumWorks Nigeria</option>
+                            <option value="v2">BeatMaker Supplies</option>
+                            <option value="v3">Stick & Stone Ltd</option>
+                            <option value="v4">Lagos Percussion Co</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>OPay Account Number</label>
+                        <input type="text" id="payout-account" placeholder="Auto-filled from vendor" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Amount (&#8358;)</label>
+                        <input type="number" id="payout-amount" placeholder="Enter payout amount">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input type="text" id="payout-desc" placeholder="e.g., June drum kit supplies">
+                    </div>
+                    <div class="form-group">
+                        <label>Admin PIN</label>
+                        <input type="password" id="payout-pin" placeholder="Enter admin PIN to authorize">
+                    </div>
+                    <button class="btn btn-primary btn-full" id="send-payout-btn">
+                        Authorize & Send Payout
+                    </button>
+                </div>
+                <div class="payment-processing" id="payout-processing" style="display:none;">
+                    <div class="spinner"></div>
+                    <p>Processing payout via OPay...</p>
+                </div>
+                <div class="payment-success" id="payout-success" style="display:none;">
+                    <div class="success-icon">&#10004;</div>
+                    <h3>Payout Sent!</h3>
+                    <p>Funds have been disbursed to the vendor's OPay account.</p>
+                    <p class="order-ref">Transaction Ref: <span id="payout-ref"></span></p>
+                    <button class="btn btn-primary" id="payout-done-btn">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/admin.js"></script>
+    <script src="../js/payouts.js"></script>
+</body>
+</html>
