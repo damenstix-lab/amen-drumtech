@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Amen Drumtech</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1 class="logo"><a href="index.html">AMEN<span>DRUMTECH</span></a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="repairs.html">Repairs</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h2>About Amen Drumtech</h2>
+        <p>Our story, mission, and passion for percussion</p>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p>Amen Drumtech is Nigeria's premier destination for professional drum equipment and accessories. Founded by drummers, for drummers, we understand what it takes to deliver the perfect beat.</p>
+                    <p>Since our inception, we've been dedicated to providing top-tier drum technology at accessible prices, serving everyone from bedroom beginners to touring professionals across West Africa.</p>
+                </div>
+                <div class="about-visual">
+                    <div class="drum-animation">
+                        <div class="drum-circle"></div>
+                        <div class="drum-circle delay-1"></div>
+                        <div class="drum-circle delay-2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-grid" style="margin-top: 60px;">
+                <div class="about-visual">
+                    <div class="feature-grid" style="grid-template-columns: 1fr 1fr;">
+                        <div class="feature-card">
+                            <div class="feature-icon">&#127928;</div>
+                            <h3>500+</h3>
+                            <p>Products Available</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">&#128101;</div>
+                            <h3>2,000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">&#128666;</div>
+                            <h3>36</h3>
+                            <p>States Delivered</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">&#11088;</div>
+                            <h3>4.9/5</h3>
+                            <p>Customer Rating</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>To make world-class drum equipment accessible to every drummer in Africa. We believe great music shouldn't be limited by equipment availability.</p>
+                    <p>We partner with leading manufacturers and local craftsmen to curate a collection that meets international standards while supporting the local music ecosystem.</p>
+                    <p>Every purchase supports our mission to develop drumming education programs in communities across Nigeria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Amen Drumtech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
